@@ -1,0 +1,58 @@
+body{
+    background-color: black;
+}
+#body_container{
+    /* border:1px solid white; */
+    width:90vw;
+    margin-top: 20vh;
+    margin-left: 5vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+}
+table{
+    width:100%;
+    border-collapse: collapse;
+}
+tr{
+    border-bottom: 2px solid white;
+}
+td{
+    padding: 20px;
+    text-align: right;
+}
+.nameCell{
+    text-align: left;
+}
+img{
+    width:20px;
+    height:20px;
+}
+
+.header{
+    width:100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 2vh;
+}
+input{
+    width:50%
+}
+input,button{
+    background-color: black;
+    color: white;
+    font-size: large;
+    padding: 10px;
+    border: 1px solid white
+}
+
+
+.percentage{
+    color: rgb(24, 183, 24);
+}
+
+.down{
+    color: brown;
+}

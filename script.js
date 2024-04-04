@@ -12,7 +12,7 @@ async function fetchData() {
   try {
     const response = await fetch(corsProxyUrl + apiUrl, {
       headers: {
-        "Origin": "http://127.0.0.1:5500",
+        // "Origin": "http://127.0.0.1:5500",
         "X-Requested-With": "XMLHttpRequest",
       },
     });
@@ -30,26 +30,26 @@ async function fetchData() {
   }
 }
 
-// function fetchDataFromThen() {
-//     fetch(corsProxyUrl + apiUrl, {
-//         headers: {
-//             "Origin": "http://127.0.0.1:5500",
-//             "X-Requested-With": "XMLHttpRequest",
-//         },
-//     })
-//     .then((response) => {
-//         if (!response.ok) {
-//             throw new Error("Network response was not ok");
-//         }
-//         return response.json();
-//     })
-//     .then((data) => {
-//         populateTable(data);
-//     })
-//     .catch((error) => {
-//         console.error("Error fetching data:", error);
-//     });
-// }
+function fetchDataFromThen() {
+    fetch(corsProxyUrl + apiUrl, {
+        headers: {
+            // "Origin": "http://127.0.0.1:5500",
+            "X-Requested-With": "XMLHttpRequest",
+        },
+    })
+    .then((response) => {
+        if (!response.ok) {
+            throw new Error("Network response was not ok");
+        }
+        return response.json();
+    })
+    .then((data) => {
+        populateTable(data);
+    })
+    .catch((error) => {
+        console.error("Error fetching data:", error);
+    });
+}
 
 function populateTable(data) {
   const tableBody = document.getElementById("cryptoTableBody");
